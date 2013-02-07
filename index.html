@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Refugees United: <br>SMS service</h1>
+
+        <p>This is a prototype for a service to help people find missing families and friends by sending a simple SMS text message to <a href="http://refunite.org">Refugees United</a>.<p>
+
+        <p>The demo was created by <a href="http://premasagar.com">Premasagar Rose</a> of <a href="http://dharmafly.com">Dharmafly</a>.</p>
+
+
+        <h2>Demo 1: Getting help</h2>
+        <p>Send the message "<strong>helpme</strong>" to <strong>07786 201114</strong> to receive instructions on how to report a person missing. The response will be:</p>
+
+        <blockquote>
+        	Send msg starting with "find" to 07786 201114. Give as much info as possible: "find Jomo Kibaki, tribe: Kikuyu, last seen: Nyeri, email: yourname@example.com"
+        </blockquote>
+
+        <h2>Demo 2: report a person</h2>
+        <p>Follow those instructions, sending a message that starts with "<strong>find</strong>" to <strong>07786 201114</strong>. You'll receive the response:</p>
+
+        <blockquote>
+        	Thank you. We will get in touch if we have any news for you. Please tell your family and friends about Refugees United: 07786 201114.
+        </blockquote>
+
+
+        <h2>Notes</h2>
+
+        <p>The prototype uses the SMS gateway service, <a href="http://taykt.com">Taykt</a>, which routes text messages to web applications. The web application can then process the message and respond. Taykt was chosen for its simplicity; other gateway services, e.g. <a href="http://www.twilio.com">Twilio</a> could be used, depending on requirements.</p>
+
+        <p>In this demo, refugee details are not logged in a database and no administrator control panel is provided.</p>
+
+        <p>The phone number used here is UK-based. However, a phone number in any given country could be used, and the end user could be charged only for sending a message to a local number. Depending on the gateway service used, Refugee United would be charged a small fee.</p>
+    </body>
+</html>

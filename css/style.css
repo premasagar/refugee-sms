@@ -1,0 +1,44 @@
+html {
+    background-color: #c8c3d8;
+}
+body {
+    margin: 0 auto;
+    max-width: 40em;
+    font-family: georgia, serif;
+    color: #2d2e42;
+    background-color: #d7d5e2;
+    padding: 3% 4% 1%;
+}
+a {
+    color: #2d2e42;
+}
+a img {
+    border: none;
+}
+body > h1 {
+    background-color: #2d2e42;
+    margin-top:0;
+    color: #fff;
+    font-size:3em;
+    padding:0.3em 0.5em;
+}
+body > h1 a {
+    color: #fff;
+    text-decoration:none;
+    display:block;
+    padding:0.38em 0.618em
+}
+body > h2 {
+    font-size:1.8em;
+}
+body > h3 {
+    font-size:1.4em;
+}
+blockquote {
+    padding-left:1em;
+    margin-left:1.62em;
+    border-left:16px solid #c8c3d8;
+}
+blockquote, blockquote a {
+    color:#564270;
+}
