@@ -15,31 +15,50 @@
         <p>The demo was created by <a href="http://premasagar.com">Premasagar Rose</a> of <a href="http://dharmafly.com">Dharmafly</a>.</p>
 
 
-        <h2>Demo 1: Getting help</h2>
-        <p>Send the message "<strong>helpme</strong>" to <strong>07786 201114</strong> to receive instructions on how to report a person missing. The response will be:</p>
+        <h2>The vision</h2>
+        <p><strong>The idea is for an extremely simple mechanism for users to register details of missing persons, and be reassured that Refugee United will investigate and respond with news.</strong></p>
+
+        <p>Poster campaigns, newspaper and radio adverts will be used to tell people about the service and give the essential details, such as the phone number to use and the information required. People will be encouraged to spread the information to others. Sending a report will cost no more than sending a local text message.</p>
+
+        <p>Information about the missing person will be structured so that it can be properly understood by the system. However, human moderators could edit the data, allowing a degree of flexibility in the text messages. An administrator's control panel could be used to search, filter or export data, as required.</p>
+
+
+        <h2>Demo 1: Get instructions</h2>
+
+        <p>If the user needs a reminder for how to use the service, they can send the one-word message "<strong>helpme</strong>" to <strong>07786 201114</strong>. Try it; it actually works. You will receive the following response:</p>
 
         <blockquote>
-        	Send msg starting with "find" to 07786 201114. Give as much info as possible: "find Jomo Kibaki, tribe: Kikuyu, last seen: Nyeri, email: yourname@example.com"
+        	Send one or more msg starting "find" to 07786 201114. Give as much info as you can: "find Jomo Kibaki, tribe: Kikuyu, last seen: Nyeri, email: you@example.com"
         </blockquote>
 
-        <h2>Demo 2: report a person</h2>
-        <p>Follow those instructions, sending a message that starts with "<strong>find</strong>" to <strong>07786 201114</strong>. You'll receive the response:</p>
+        <p>Here, the user is being asked to supply all the relevant information, with each type of data separated by commas and colons.</p>
+
+
+        <h2>Demo 2: Find a missing person</h2>
+
+        <p>To report a person missing, the user can send a message to the same phone number, starting with the word "<strong>find</strong>", followed by information about the person, as described above. The following response is given:</p>
 
         <blockquote>
-        	Thank you. We will get in touch if we have any news for you. Please tell your family and friends about Refugees United: 07786 201114.
+        	Thanks. If you have more details, please send them. We'll get in touch if we have news. Please tell family and friends about Refugees United: 07786 201114
         </blockquote>
 
-       	<p>An admin for the service is sent an email notifying them of the reported person.</p>
+        <p>For this prototype, an email is then sent to a moderator about the reported person. The "thank you" response message is always the same - the data is not processed at all. In the final version of the app, however, the data could be programmatically split apart and logged in a database. An admin control panel might be used to correct any incorrectly formatted messages.</p>
+
+        <p>Of course, the keywords "helpme" and "find" could be changed if required and the type of formatting (e.g. with commas and colons) could be changed, if a more intuitive format is devised.</p>
+
+        <p>The call-to-action, asking users to tell family and friends about Refugee United's service, is included to help the service spread virally, by word of mouth.</p>
 
 
-        <h2>Notes</h2>
+        <h2>Implementation details</h2>
 
         <p>The prototype uses the SMS gateway service, <a href="http://taykt.com">Taykt</a>, which routes text messages to web applications. The web application can then process the message and respond. Taykt was chosen for its simplicity; other gateway services, e.g. <a href="http://www.twilio.com">Twilio</a> could be used, depending on requirements.</p>
 
-        <p>For the first demo, messages starting "helpme" are passed to the application at the address <a href="http://refugee-sms.dharmafly.com/app/helpme">refugee-sms.dharmafly.com/app/helpme</a>. For the second demo, messages starting "find" are passed to the application at the address <a href="http://refugee-sms.dharmafly.com/app/find">refugee-sms.dharmafly.com/app/find</a>.
-
-        <p>In this demo, refugee details are not logged in a database and no administrator control panel is provided.</p>
+        <p>For the first demo, messages starting "helpme" are passed to the application at the address <a href="http://refugee-sms.dharmafly.com/app/helpme/">refugee-sms.dharmafly.com/app/helpme/</a>. For the second demo, messages starting "find" are passed to the address <a href="http://refugee-sms.dharmafly.com/app/find/">refugee-sms.dharmafly.com/app/find/</a>.
 
         <p>The phone number used here is UK-based. However, a phone number in any given country could be used, and the end user could be charged only for sending a message to a local number. Depending on the gateway service used, Refugee United would be charged a small fee.</p>
+
+        <p>SMS has been used here, due to its ubiquity, simplicity and familiarity. It seems conceivable though that partnerships could be forged with telecoms companies to spread the service through USSD too. For example, Refugee United's service details might be advertised at the end of a telco's top-up confirmation message. A generous (or marketing savvy) telco might even be willing to host the service on their own infrastructure, making it a free service to the end user and to Refugee United.</p>
+
+        <p class="footer"><em>by</em> <a href="http://dharmafly.com">Dharmafly</a></p>
     </body>
 </html>

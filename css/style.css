@@ -12,11 +12,14 @@ body {
 a {
     color: #2d2e42;
 }
+a:hover {
+    color: #564270;
+}
 a img {
     border: none;
 }
 body > h1 {
-    background-color: #2d2e42;
+    background-color: #564270;
     margin-top:0;
     color: #fff;
     font-size:3em;
@@ -40,5 +43,19 @@ blockquote {
     border-left:16px solid #c8c3d8;
 }
 blockquote, blockquote a {
-    color:#564270;
+    color: #564270;
+}
+.footer {
+    margin-top: 1.6em;
+    padding: 0.4em 0.8em;
+    background-color: #564270;
+    color: #fff;
+    text-align: right;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
 }
